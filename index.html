@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Rapport Vocal</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icon-180.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Rapport Vocal">
+  <meta name="theme-color" content="#1f4e79">
+  <style>
+    body { font: 18px -apple-system, system-ui, sans-serif; margin: 0; padding: max(1rem, env(safe-area-inset-top)) 1rem 1rem; background: #f4f6f8; color: #111; }
+    h1 { font-size: 1.3rem; margin: 0 0 1rem; }
+    #types { display: grid; gap: .6rem; margin-bottom: 1.5rem; }
+    button { font: inherit; padding: 1rem; border-radius: .8rem; border: 2px solid #1f4e79; background: #fff; color: #1f4e79; }
+    #types button[aria-pressed="true"] { background: #1f4e79; color: #fff; }
+    #rec { width: 100%; padding: 1.6rem; font-size: 1.4rem; background: #1f4e79; color: #fff; }
+    #rec.on { background: #c0392b; border-color: #c0392b; }
+    #rec:disabled { opacity: .4; }
+    #share { width: 100%; margin-top: 1rem; }
+    #status { margin-top: 1rem; min-height: 3em; }
+  </style>
+</head>
+<body>
+  <h1>Rapport Vocal</h1>
+  <div id="types" role="group" aria-label="Type de rapport"></div>
+  <button id="rec" disabled>Enregistrer</button>
+  <button id="share" hidden>Partager</button>
+  <p id="status" role="status" aria-live="polite">Choisissez un type de rapport.</p>
+  <script src="app.js"></script>
+</body>
+</html>
